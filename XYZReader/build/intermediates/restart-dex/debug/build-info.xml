@@ -5,33 +5,71 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="13765348551009"
+    timestamp="6109194211896"
     token="-4266657010026127238"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="3185" />
+        duration="2623" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="741" />
+        duration="108" />
     <task
         name="verifier"
-        duration="26" />
+        duration="38" />
 
     <artifact
-        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
-        type="MAIN" />
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="13765348551009"
+        timestamp="4470979030701"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="5470944712312"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="6109194211896"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
