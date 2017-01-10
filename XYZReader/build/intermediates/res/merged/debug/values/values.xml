@@ -32,9 +32,12 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="colorAccent">#04561A</color>
-    <color name="colorPrimary">#04561A</color>
-    <color name="colorPrimaryDark">#04561A</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00796B</color>
+    <color name="colorPrimaryLight">#B2DFDB</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
     <color name="design_fab_shadow_start_color">#44000000</color>
@@ -714,6 +717,8 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="app_bar_elevation">4dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -765,9 +770,12 @@
     <dimen name="detail_title_text_size">32sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="expanded_toolbar_height">80dp</dimen>
+    <dimen name="expanded_toolbar_title_margin_bottom">40dp</dimen>
     <dimen name="fab_elevation">2dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="floating_action_button_elevation">4dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -793,10 +801,14 @@
     <dimen name="material_component_button_text_size">14pt</dimen>
     <dimen name="material_component_button_touchable_target_height">48dp</dimen>
     <dimen name="material_component_cards_action_button_row_padding">8dp</dimen>
+    <dimen name="material_component_cards_left_and_right_padding">16dp</dimen>
+    <dimen name="material_component_cards_padding_from_edge_of_screen_to_card">4dp</dimen>
     <dimen name="material_component_cards_primary_title_bottom_padding">16dp</dimen>
     <dimen name="material_component_cards_primary_title_top_padding">24dp</dimen>
+    <dimen name="material_component_cards_space_between_cards">4dp</dimen>
     <dimen name="material_component_cards_supporting_text_bottom_padding">24dp</dimen>
     <dimen name="material_component_cards_supporting_text_top_padding">16dp</dimen>
+    <dimen name="material_component_cards_top_and_bottom_padding">16dp</dimen>
     <dimen name="material_component_dialogs_action_area_height">52dp</dimen>
     <dimen name="material_component_dialogs_elevation">24dp</dimen>
     <dimen name="material_component_dialogs_padding_around_buttons">8dp</dimen>
@@ -854,6 +866,7 @@
     <dimen name="material_layout_vertical_spacing_status_bar">24dp</dimen>
     <dimen name="material_layout_vertical_spacing_subtitle">48dp</dimen>
     <dimen name="material_layout_vertical_spacing_tool_bar">56dp</dimen>
+    <dimen name="max_width">400dp</dimen>
     <dimen name="notification_action_icon_size">32dp</dimen>
     <dimen name="notification_action_text_size">13sp</dimen>
     <dimen name="notification_big_circle_margin">12dp</dimen>
@@ -891,6 +904,7 @@
     <integer name="bottom_sheet_slide_duration">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
+    <integer name="grid_column_count">2</integer>
     <integer name="list_column_count">2</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -2261,7 +2275,9 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
-
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
     <style name="Theme.Bacon.Detail">
         <item name="android:statusBarColor">@android:color/transparent</item>
