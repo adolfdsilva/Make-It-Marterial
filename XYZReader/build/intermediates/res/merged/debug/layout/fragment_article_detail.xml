@@ -4,13 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-
     tools:ignore="MergeRootFrame">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="356dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -49,10 +48,10 @@
                     android:layout_gravity="bottom"
                     android:elevation="@dimen/app_bar_elevation"
                     android:orientation="vertical"
-                    android:paddingBottom="@dimen/material_layout_keylines_screen_edge_margin"
+                    android:paddingBottom="@dimen/margin_16dp"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:paddingTop="@dimen/material_layout_keylines_screen_edge_margin">
+                    android:paddingTop="@dimen/margin_16dp">
 
                     <TextView
                         android:id="@+id/article_title"
@@ -60,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
-                        android:textColor="@color/material_light_white"
+                        android:textColor="@color/md_white_1000"
                         android:textStyle="bold"
                         android:visibility="invisible" />
 
@@ -69,7 +68,7 @@
                         style="?android:attr/textAppearanceSmall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/material_light_white" />
+                        android:textColor="@color/md_white_1000" />
 
                 </LinearLayout>
 
@@ -105,13 +104,13 @@
                 style="?android:attr/textAppearanceMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/material_layout_keylines_screen_edge_margin"
+                android:layout_marginBottom="@dimen/margin_16dp"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginTop="@dimen/material_layout_keylines_screen_edge_margin"
+                android:layout_marginTop="@dimen/margin_16dp"
                 android:autoLink="web"
                 android:linksClickable="true"
-                android:paddingTop="@dimen/material_layout_keylines_screen_edge_margin"
+                android:paddingTop="@dimen/margin_16dp"
                 android:textColor="@android:color/black" />
 
         </LinearLayout>
@@ -122,7 +121,7 @@
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/material_component_floating_action_button_margin"
+        android:layout_margin="@dimen/margin_16dp"
         android:clickable="true"
         android:contentDescription="@string/action_share"
         android:src="@drawable/ic_share"

@@ -3,7 +3,7 @@ package com.example.xyzreader.ui;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -25,8 +25,8 @@ import android.widget.TextView;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 
 /**
@@ -81,10 +81,6 @@ public class ArticleDetailFragment extends Fragment implements
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        // In support library r8, calling initLoader for a fragment in a FragmentPagerAdapter in
-        // the fragment's onCreate may cause the same LoaderManager to be dealt to multiple
-        // fragments because their mIndex is -1 (haven't been added to the activity yet). Thus,
-        // we do this in onActivityCreated.
         getLoaderManager().initLoader(0, null, this);
     }
 
@@ -97,15 +93,17 @@ public class ArticleDetailFragment extends Fragment implements
     }
 
     void init() {
-         mPhotoView = (ImageView) rootView.findViewById(R.id.photo);
-         metaBar =  (LinearLayout) rootView.findViewById(R.id.meta_bar);
-         mTitleView = (TextView) rootView.findViewById(R.id.article_title);
-         mAuthorView =  (TextView) rootView.findViewById(R.id.article_author);;
-         mBodyView =  (TextView) rootView.findViewById(R.id.article_body);;
-         mShareFab = (FloatingActionButton) rootView.findViewById(R.id.share_fab);
-         mToolbar = (Toolbar) rootView.findViewById(R.id.detail_toolbar);
-         mCollapsingToolbarLayout = (CollapsingToolbarLayout) rootView.findViewById(R.id.toolbar_layout);
-         mAppBarLayout = (AppBarLayout) rootView.findViewById(R.id.app_bar);
+        mPhotoView = (ImageView) rootView.findViewById(R.id.photo);
+        metaBar = (LinearLayout) rootView.findViewById(R.id.meta_bar);
+        mTitleView = (TextView) rootView.findViewById(R.id.article_title);
+        mAuthorView = (TextView) rootView.findViewById(R.id.article_author);
+        ;
+        mBodyView = (TextView) rootView.findViewById(R.id.article_body);
+        ;
+        mShareFab = (FloatingActionButton) rootView.findViewById(R.id.share_fab);
+        mToolbar = (Toolbar) rootView.findViewById(R.id.detail_toolbar);
+        mCollapsingToolbarLayout = (CollapsingToolbarLayout) rootView.findViewById(R.id.toolbar_layout);
+        mAppBarLayout = (AppBarLayout) rootView.findViewById(R.id.app_bar);
     }
 
     @Override
@@ -131,7 +129,7 @@ public class ArticleDetailFragment extends Fragment implements
         String photo = cursor.getString(ArticleLoader.Query.PHOTO_URL);
 
         if (mToolbar != null) {
-                mToolbar.setTitle(title);
+            mToolbar.setTitle(title);
             mToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -147,23 +145,18 @@ public class ArticleDetailFragment extends Fragment implements
 
         Picasso.with(getActivity())
                 .load(photo)
-                .into(new Target() {
+                .into(mPhotoView, new Callback() {
                     @Override
-                    public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                        mPhotoView.setImageBitmap(bitmap);
-                        changeUIColors(bitmap);
+                    public void onSuccess() {
+                        changeUIColors();
                     }
 
                     @Override
-                    public void onBitmapFailed(Drawable errorDrawable) {
+                    public void onError() {
 
                     }
-
-                    @Override
-                    public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-                    }
-        });
+                });
+//        Picasso.with(getActivity()).load(photo).into(mPhotoView);
 
         mShareFab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -181,17 +174,21 @@ public class ArticleDetailFragment extends Fragment implements
     }
 
 
-    private void changeUIColors(Bitmap bitmap) {
-        Palette.generateAsync(bitmap, new Palette.PaletteAsyncListener() {
-            public void onGenerated(Palette palette) {
-                int defaultColor = 0xFF333333;
-                int darkMutedColor = palette.getDarkMutedColor(defaultColor);
-                metaBar.setBackgroundColor(darkMutedColor);
-                if (mCollapsingToolbarLayout != null) {
-                    mCollapsingToolbarLayout.setContentScrimColor(darkMutedColor);
-                    mCollapsingToolbarLayout.setStatusBarScrimColor(darkMutedColor);
+    private void changeUIColors() {
+        Bitmap bitmap = ((BitmapDrawable) mPhotoView.getDrawable()).getBitmap();
+
+        if (bitmap != null) {
+            Palette.generateAsync(bitmap, new Palette.PaletteAsyncListener() {
+                public void onGenerated(Palette palette) {
+                    int defaultColor = 0xFF333333;
+                    int darkMutedColor = palette.getDarkMutedColor(defaultColor);
+                    metaBar.setBackgroundColor(darkMutedColor);
+                    if (mCollapsingToolbarLayout != null) {
+                        mCollapsingToolbarLayout.setContentScrimColor(darkMutedColor);
+                        mCollapsingToolbarLayout.setStatusBarScrimColor(darkMutedColor);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }

@@ -60,12 +60,12 @@
         "source": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
-    },
-    {
         "merged": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/25.0.0/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
