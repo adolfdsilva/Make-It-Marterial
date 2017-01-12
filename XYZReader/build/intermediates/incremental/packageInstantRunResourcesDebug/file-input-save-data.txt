@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Jan 12 19:54:47 IST 2017
+#Thu Jan 12 20:32:02 IST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/res/resources-debug.ap_/res/drawable/abc_btn_colored_material.xml
