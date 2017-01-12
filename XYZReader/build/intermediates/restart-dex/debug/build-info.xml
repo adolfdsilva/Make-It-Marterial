@@ -5,40 +5,33 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="9653255436453"
+    timestamp="1089980503970"
     token="-4266657010026127238"
-    verifier="METHOD_DELETED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1245" />
+        duration="38135" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="133" />
+        duration="3599" />
     <task
         name="verifier"
-        duration="4" />
+        duration="54" />
 
     <artifact
-        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-        type="DEX" />
+        location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="8694085181122"
-        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        timestamp="1089980503970"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/outputs/apk/XYZReader-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="9653255436453"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="/Users/Audi/Documents/Work/Code/Nanodegree/xyzreader/XYZReader/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

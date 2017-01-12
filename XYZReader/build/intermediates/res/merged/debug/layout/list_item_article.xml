@@ -38,7 +38,7 @@
             android:textColor="@color/colorSecondaryText"
             android:paddingLeft="@dimen/material_component_cards_left_and_right_padding"
             android:paddingRight="@dimen/material_component_cards_left_and_right_padding"
-            android:paddingTop="@dimen/margin_16dp"/>
+            android:paddingTop="@dimen/material_dimen_16dp"/>
 
         <TextView
             android:id="@+id/article_author"

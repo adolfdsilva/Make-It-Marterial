@@ -20,4 +20,5 @@
     <dimen name="app_bar_elevation">4dp</dimen>
     <dimen name="material_dimen_8dp">8dp</dimen>
     <dimen name="material_dimen_16dp">16dp</dimen>
+    <dimen name="dimen_fab_resting_elevation">6dp</dimen>
 </resources>
